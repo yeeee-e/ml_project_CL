@@ -1,6 +1,6 @@
 # Experiment Summary
 
-All numbers are produced by the local scripts in this repository. Accuracy is top-1 percentage on the classes visible under each experiment's continual-learning setting.
+
 
 | run | dataset | setting | method | backbone | final_acc | avg_inc_acc | forgetting | bwt | wall_s | train_s | predict_s | peak_rss_mb | proj_density |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
