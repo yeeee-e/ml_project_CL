@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local environments and caches
+.conda_env/
+.conda_pkgs/
+.mplconfig/
+.agents/
+wheels/
+
+# Datasets, features, and model weights
+data/
+models/*.pt
+models/*.pth
+models/*.bin
+
+# Large or regenerated experiment outputs
+results/*_acc_matrix.csv
+results/*_per_step.csv
+
+# Keep lightweight placeholders if needed
+!models/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

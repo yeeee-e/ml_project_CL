@@ -1,0 +1,18 @@
+experiment_name: level2_ncm_baseline_clip
+setting: task-agnostic
+dataset_name: cifar100
+data_dir: data
+cache_dir: data/features
+output_dir: results
+backbone: clip_vit_b_16
+feature_batch_size: 128
+num_workers: 4
+force_feature_rebuild: false
+
+seed: 2
+init_cls_num: 10
+inc_cls_num: 10
+total_cls_num: 100
+
+method: ncm
+method_kwargs: {}

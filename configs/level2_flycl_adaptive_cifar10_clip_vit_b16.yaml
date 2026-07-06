@@ -1,0 +1,23 @@
+experiment_name: level2_flycl_adaptive_cifar10_clip
+setting: task-agnostic
+dataset_name: cifar10
+data_dir: data
+cache_dir: data/features
+output_dir: results
+backbone: clip_vit_b_16
+feature_batch_size: 128
+num_workers: 4
+force_feature_rebuild: false
+
+seed: 2
+init_cls_num: 2
+inc_cls_num: 2
+total_cls_num: 10
+
+method: flycl_adaptive
+method_kwargs:
+  proj_dim: 4096
+  fan_in: 6
+  whiten: true
+  top_k: 512
+  seed: 2

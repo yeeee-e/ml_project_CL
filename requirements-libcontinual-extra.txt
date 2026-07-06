@@ -1,0 +1,6 @@
+timm==0.6.7
+ftfy==6.3.1
+regex==2024.11.6
+continuum==1.2.7
+diffdist==0.1
+easydict

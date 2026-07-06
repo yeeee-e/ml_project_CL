@@ -1,0 +1,28 @@
+experiment_name: level1_saber_reproduction_tinyimagenet_clip
+setting: task-aware
+dataset_name: tinyimagenet
+data_dir: data
+cache_dir: data/features
+output_dir: results
+backbone: clip_vit_b_16
+feature_batch_size: 128
+num_workers: 4
+force_feature_rebuild: false
+
+seed: 2
+init_cls_num: 20
+inc_cls_num: 20
+total_cls_num: 200
+
+method: saber_feature_prompt
+method_kwargs:
+  lr: 0.02
+  epochs: 80
+  batch_size: 256
+  subspace_rank: 8
+  projection_threshold: 0.08
+  cosine_threshold: -0.05
+  backward_lr: 0.008
+  backward_steps: 15
+  seed: 2
+  enable_backward_refinement: true

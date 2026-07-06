@@ -1,0 +1,28 @@
+experiment_name: level1_saber_ablation
+setting: task-aware
+dataset_name: cifar100
+data_dir: data
+cache_dir: data/features
+output_dir: results
+backbone: resnet18
+feature_batch_size: 512
+num_workers: 4
+force_feature_rebuild: false
+
+seed: 2
+init_cls_num: 10
+inc_cls_num: 10
+total_cls_num: 100
+
+method: saber_feature_prompt
+method_kwargs:
+  lr: 0.03
+  epochs: 80
+  batch_size: 256
+  subspace_rank: 8
+  projection_threshold: 0.08
+  cosine_threshold: -0.05
+  backward_lr: 0.01
+  backward_steps: 0
+  seed: 2
+  enable_backward_refinement: false

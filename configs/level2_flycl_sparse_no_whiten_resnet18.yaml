@@ -1,0 +1,21 @@
+experiment_name: level2_flycl_ablation
+dataset_name: cifar100
+data_dir: data
+cache_dir: data/features
+output_dir: results
+backbone: resnet18
+feature_batch_size: 512
+num_workers: 4
+force_feature_rebuild: false
+
+seed: 2
+init_cls_num: 10
+inc_cls_num: 10
+total_cls_num: 100
+
+method: flycl_sparse
+method_kwargs:
+  proj_dim: 4096
+  fan_in: 12
+  seed: 2
+  whiten: false
